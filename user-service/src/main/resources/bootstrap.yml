@@ -1,0 +1,26 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
+
+spring:
+  cloud:
+    config:
+      # 与远程仓库中的配置文件的application保持一致
+      name: user
+      # 远程仓库中的配置文件的profile保持一致
+      profile: dev
+      # 远程仓库中的版本保持一致
+      label: master
+      discovery:
+        # 使用配置中心
+        enabled: true
+        # 配置中心服务id
+        service-id: config-service
+#  rabbitmq的配置信息;
+#  如下配置的rabbit都是默认值，可以不配置
+  rabbitmq:
+    host: 172.16.212.31 # localhost # 172.16.212.31
+    port: 5672
+    username: guest
+    password: guest

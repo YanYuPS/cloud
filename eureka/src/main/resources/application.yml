@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: eureka-service #Eureka中作为服务id
+server:
+  port: ${port:10086}
+
+#Eureka
+eureka:
+  client:
+    service-url: # EurekaServer的地址，现在是自己的地址，如果是集群，需要写其它Server的地址。
+      defaultZone: ${defaultZone:http://127.0.0.1:10087/eureka}
+#    register-with-eureka: false # 不注册自己
+#    fetch-registry: false #不拉取

@@ -1,0 +1,31 @@
+# 采用配置中心方式，则不使用这个yml
+
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/ecommerce?useSSL=false
+#    username: root
+#    password: root.123
+#  application:
+#    name: user-service #应用名
+#server:
+#  port: ${port:9091}
+#
+## mybatis配置
+#mybatis:
+#  # 实体类别名包路径
+#  type-aliases-package: com.zy.pojo
+#
+##Eureka
+#eureka:
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:10086/eureka,http://localhost:10087/eureka
+#  instance:
+#    ip-address: 127.0.0.1 # ip地址
+#    prefer-ip-address: true # 更倾向于使用ip，而不是host名
+#
+##    心跳（续约）：每30s发送一次心跳，连续90s没有心跳，则认为宕机
+##    lease-expiration-duration-in-seconds: 90
+##    lease-renewal-interval-in-seconds: 30
+#

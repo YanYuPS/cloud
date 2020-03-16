@@ -1,0 +1,27 @@
+server:
+  port: 12000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10086/eureka,http://127.0.0.1:10087/eureka
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/YanYuPS/cloud-config.git
+  # rabbitmq的配置信息;如下配置的rabbit都是默认值，其实可以完全不配置
+  rabbitmq:
+    host: 172.16.212.31 # localhost # 172.16.212.31
+    port: 5672
+    username: guest
+    password: guest
+
+management:
+  endpoints:
+    web:
+      exposure:
+        # 暴露触发消息总线的地址
+        include: bus-refresh
